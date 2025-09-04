@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Atividade06 {
+    public static void main(String[] args) {
+
+        // Criar o scanner para ler entradas
+        Scanner scanner = new Scanner(System.in);
+
+        // armazenar os valores dos vetores
+        int[] valores = new int[10];
+
+        // Ler 10 valores inteiros e armazená-los no vetor
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Digite o " + (i + 1) + "° valor.: ");
+            valores[i] = scanner.nextInt();
+        }
+
+        // Imprimir os valores pares
+        System.out.println("Valores pares:");
+        for (int i = 0; i < 10; i++) {
+            if (valores[i] % 2 == 0) {
+                System.out.println(valores[i]);
+            }
+        }
+
+       scanner.close();
+    }
+}
