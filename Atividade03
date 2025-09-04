@@ -1,0 +1,22 @@
+public class atividade03 {
+    public static void main(String[] args) {
+
+        // Declaração e inicialização do vetor com 2 elementos
+        int[] vetor = {5, 10};
+
+        // Exibindo os valores antes da troca
+        System.out.println("Escolha dois valores");
+        System.out.println("Primeiro valor: " + vetor[0]);
+        System.out.println("Segundo valor: " + vetor[1]);
+
+        // Realizando a troca de valores
+        int temp = vetor[0];
+        vetor[0] = vetor[1];
+        vetor[1] = temp;
+
+        // Exibindo os valores após a troca
+        System.out.println("\nApós a troca:");
+        System.out.println("Primeiro valor: " + vetor[0]);
+        System.out.println("Segundo valor: " + vetor[1]);
+    }
+}
