@@ -1,0 +1,10 @@
+public class atividade01 {
+
+    public static void main(String[] args) {
+        // Declaração dos vetores
+        int[] vetor = {10, 20, 30, 40, 50};
+
+        // mostrar o vetor selecionado
+        System.out.println("O terceiro elemento do vetor é: " + vetor[2]);
+    }
+}
