@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Atividade05 {
+    public static void main(String[] args) {
+
+      Scanner scanner = new Scanner(System.in);
+
+      //3 posições de vetores Strings
+      String[] nomes = new String[3];
+
+      //inserir 3 nomes
+      for (int i = 0; i <3; i++){
+      System.out.println("Digite o nome: " + (i + 1) + ": ");
+      nomes[i] = scanner.nextLine(); //vai ler o nome e guardar no vetor basicamente
+      }
+
+      //mostrar os nomes que foram inseridos agora
+      System.out.println("\nNomes inseridos:");
+      for (String nome : nomes){
+          System.out.println(nome);
+      }
+
+      scanner.close();
+
+
+    }
+}
