@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Atividade07 {
+    public static void main(String[] args) {
+        // Criar o scanner para ler entradas
+        Scanner scanner = new Scanner(System.in);
+
+        // Criar o vetor para armazenar os 15 nomes
+        String[] nomes = new String[15];
+
+        // Ler 15 nomes e armazená-los no vetor
+        for (int i = 0; i < 15; i++) {
+            System.out.print("Digite o nome " + (i + 1) + ": ");
+            nomes[i] = scanner.nextLine();
+        }
+
+        // Imprimir os nomes na sequência inversa
+        System.out.println("\nNomes na sequência inversa:");
+        for (int i = 14; i >= 0; i--) {
+            System.out.println(nomes[i]);
+        }
+
+        // Fechar o scanner
+        scanner.close();
+    }
+}
