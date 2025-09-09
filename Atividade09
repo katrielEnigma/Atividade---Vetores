@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Atividade09 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        // Criando dois vetores: um pra guardar os nomes dos carros, outro pro consumo deles
+        String[] modelos = new String[5];
+        double[] consumos = new double[5];
+
+        // Pedindo pro usuário digitar os dados dos carros
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Digite o modelo do carro " + (i + 1) + ":");
+            modelos[i] = teclado.nextLine(); // lê o nome do carro
+
+            System.out.println("Digite o consumo do " + modelos[i] + " (km por litro):");
+            consumos[i] = teclado.nextDouble(); // lê o consumo
+            teclado.nextLine(); // limpa o "enter" que ficou no buffer
+        }
+
+        // Descobrindo qual carro é o mais econômico
+        int maisEconomico = 0; // começa assumindo que o primeiro é o mais econômico
+        for (int i = 1; i < 5; i++) {
+            if (consumos[i] > consumos[maisEconomico]) {
+                maisEconomico = i; // atualiza se achar um carro mais econômico
+            }
+        }
+
+        // Mostra qual é o mais econômico
+        System.out.println("\nO carro mais econômico é: " + modelos[maisEconomico]);
+
+        // Agora calcula quanto cada carro gasta pra rodar 1000km
+        System.out.println("\nConsumo de cada carro para percorrer 1000 km:");
+        for (int i = 0; i < 5; i++) {
+            double litrosNecessarios = 1000 / consumos[i];
+            System.out.printf("%s consome %.2f litros\n", modelos[i], litrosNecessarios);
+        }
+
+        teclado.close(); // fecha o scanner (boa prática)
+    }
+}
